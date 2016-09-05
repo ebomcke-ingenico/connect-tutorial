@@ -1,0 +1,32 @@
+<template name="product">
+    <div class="ui card product">
+        <div class="blurring dimmable image">
+            <div class="ui dimmer">
+                <div class="content">
+                    <div class="center">
+                        {{#if isInCart}}
+                        <div class="ui teal button show-cart">
+                            <i class="in cart icon"></i>
+                            Show cart
+                        </div>
+                        {{else}}
+                        <div class="ui basic teal button add-to-cart">
+                            <i class="add to cart icon"></i>
+                            Add to cart
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            <img src="/images/{{ thumbnail }}">
+        </div>
+        <a class="content" href="/store/{{ link }}">
+            <div class="header">{{ name }}</div>
+            <p class="description">{{ description }}</p>
+            <div class="meta">
+                <div class="ui rating" data-rating="{{ rating }}" data-max-rating="5"></div>
+            </div>
+            <div class="ui teal button">See more</div>
+        </a>
+    </div>
+</template>

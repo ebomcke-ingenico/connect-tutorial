@@ -1,0 +1,39 @@
+<template name="productDetails">
+    <div class="ui container">
+        <div class="ui segment product-container">
+            <h1 class="ui header">
+                {{ product.name }}
+                <div class="sub header">{{ product.description }}</div>
+            </h1>
+            <div class="ui rating" data-rating="{{ product.rating }}" data-max-rating="5"></div>
+            <div class="ui vertically padded stackable grid">
+                <div class="four wide column">
+                    <img class="ui image" src="/images/{{ product.thumbnail }}">
+                </div>
+                <div class="eight wide column">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+                    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+
+                    <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+                </div>
+                <div class="four wide column">
+                    <h2>Purchase options</h2>
+                    <div class="ui vertical buttons">
+                        {{#if isInCart}}
+                        <a class="ui red button" href="/cart">
+                            <i class="in cart icon"></i>
+                            Show cart
+                        </a>
+                        {{else}}
+                        <div class="ui basic red button add-to-cart">
+                            <i class="add to cart icon"></i>
+                            Add to cart
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

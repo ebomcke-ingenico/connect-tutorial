@@ -1,0 +1,27 @@
+<template name="menu">
+    <div class="ui container">
+        <div class="ui borderless stackable teal menu">
+            <div class="item logo">
+                <a href="/">
+                    <div class="ui header logo">connect <span class="normal">showcase</span></div>
+                </a>
+                <div class="menu-button">
+                    <i class="big teal sidebar icon"></i>
+                </div>
+            </div>
+            <div class="right menu">
+                <a href="/store" class="item">
+                        Shop
+                    </a>
+                {{#if notEmpty}}
+                <a href="/cart" class="item badge">
+                        My Cart
+                    </a>
+                {{/if}}
+                <a href="/settings" class="item">
+                        Settings
+                    </a>
+            </div>
+        </div>
+    </div>
+</template>

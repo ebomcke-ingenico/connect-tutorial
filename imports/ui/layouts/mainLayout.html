@@ -1,0 +1,12 @@
+<template name="mainLayout">
+    <div id="menu">
+        {{>Template.dynamic template=menu}}
+    </div>
+    <div id="menu-placeholder"></div>
+    <main>
+        {{>Template.dynamic template=content}}
+    </main>
+    <footer>
+        {{>Template.dynamic template=footer}}
+    </footer>
+</template>

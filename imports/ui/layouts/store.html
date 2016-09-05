@@ -1,0 +1,11 @@
+<template name="store">
+    <div class="ui container">
+        <div class="ui basic segment store-container">
+            <div class="ui four stackable doubling cards">
+                {{#each products}}
+                {{>product}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</template>

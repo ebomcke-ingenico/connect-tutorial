@@ -1,0 +1,160 @@
+/* CSS declarations go here */
+
+@import "lib/semantic-ui/themes/default/globals/site.variables.import.less";
+@import "lib/semantic-ui/site/globals/site.variables.import.less";
+@media screen and (min-width: @tabletBreakpoint) {
+    .ui.stackable.menu .menu-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: @tabletBreakpointExclusiveUnder) {
+    .ui.stackable.menu > .right.menu {
+        display: none;
+        margin: 0 !important;
+    }
+    .ui.stackable.menu > .right.menu > .item {
+        display: block;
+        text-align: center;
+    }
+    .ui.stackable.menu > .item.logo-container {
+        justify-content: space-between;
+    }
+}
+
+.badge:after {
+    content: '\2022';
+    color: @teal;
+    position: relative;
+    top: -0.5em;
+    width: 1em;
+    margin-right: -1em;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.ui.card.product > .image > img.ui.image.relaxed {
+    width: ~"calc(100% - 4em)";
+    margin: 2em;
+}
+
+i.icon > img {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: @tabletBreakpoint) {
+    .ui.jumbo.header {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: @tabletBreakpoint) {
+    .ui.jumbo.header {
+        font-size: 3rem;
+    }
+}
+
+.splash {
+    padding: 8rem 0 4rem;
+    background: url(/images/points.jpg);
+    background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and ( min--moz-device-pixel-ratio: 2),
+only screen and ( -o-min-device-pixel-ratio: 2/1),
+only screen and ( min-device-pixel-ratio: 2),
+only screen and ( min-resolution: 192dpi),
+only screen and ( min-resolution: 2dppx) {
+    .splash {
+        background: url(/images/points@2x.jpg);
+        background-size: cover;
+    }
+}
+
+.ui.header.logo {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ui.header.logo > .normal {
+    font-weight: normal;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+p.grey {
+    color: @grey;
+}
+
+p.big {
+    font-size: 1.125em;
+}
+
+@media screen and (max-width: 768px) {
+    .ui.stackable.menu .menu-button {
+        position: absolute;
+        right: 1.125em;
+        cursor: pointer;
+    }
+    .ui.menu a.item:hover {
+        background: transparent;
+    }
+    #menu {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background: #f9fafb;
+        box-shadow: 0px 1px 3px 0px #d4d4d5, 0px 0px 0px 1px #d4d4d5;
+    }
+    #__blaze-root #menu-placeholder {
+        height: 3.5rem;
+    }
+//    main {
+//        position: relative;
+//        top: 3.5rem;
+//    }
+    .ui.segment.store-container,
+    .ui.segment.product-container,
+    .ui.segment.cart-container {
+        position: relative;
+        top: 2rem;
+    }
+    .ui.list > .item [class*="right floated"]{
+        float: none;
+        margin-top: 1rem;
+    }
+}
+
+.card a.content {
+    display: block;
+}
+
+.card a.content .meta + .ui.button {
+    margin-top: 1rem;
+}
+
+.ui.form.payment-product-form {
+    min-height: 3rem;
+}
+
+.ui.header.jumbo,
+.ui.header.logo {
+    font-family: 'Dosis', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}

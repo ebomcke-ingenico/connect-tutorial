@@ -1,0 +1,8 @@
+{
+    "galaxy.meteor.com": {
+        "env": {
+            "ROOT_URL": "http://connect-showcase.etiennebomcke.me",
+            "MONGO_URL": "mongodb://connect:connect@ds023452.mlab.com:23452/connect-showcase"
+        }
+    }
+}
