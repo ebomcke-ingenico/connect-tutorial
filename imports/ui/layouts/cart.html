@@ -26,6 +26,19 @@
                 </div>
                 {{/each}}
             </div>
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <div class="ui header">
+                        MyCheckout
+                    </div>
+                    <div class="ui left action fluid input">
+                        <button class="ui red labeled icon button checkout-mycheckout">
+                            <i class="cart icon"></i> Checkout
+                        </button>
+                        <input type="text" value="€{{total}}">
+                    </div>
+                </div>
+            </div>
             {{else}}
             <div class="ui info message">
                 <div class="ui header">Your cart is currently empty</div>
