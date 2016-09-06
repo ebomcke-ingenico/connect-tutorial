@@ -26,6 +26,9 @@ var build = function (options) {
             }
         });
     });
+    request.hostedCheckoutSpecificInput = {
+        returnUrl: options.returnUrl
+    }
     return request;
 }
 

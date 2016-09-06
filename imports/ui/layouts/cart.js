@@ -29,6 +29,7 @@ Template.cart.onCreated(function () {
         Meteor.call('createHostedCheckout', Modules.client.buildPaymentRequest({
             paymentContext: Session.get('paymentContext'),
             items: cart.getItems(),
+            returnUrl: window.location.href + '?status=SUCCESS'
         }), function (error, result) {
             if (error) {
                 self.toggleLoading(false);
@@ -51,7 +52,11 @@ Template.cart.helpers({
         return cart.total();
     },
     showCartDetails() {
-        return Template.instance().currentCheckoutStep.get() === 'SHOW_CART_DETAILS';
+        return Template.instance().currentCheckoutStep.get() === 'SHOW_CART_DETAILS' &&
+            FlowRouter.current().queryParams.status !== 'SUCCESS';
+    },
+    showPaymentSuccess() {
+        return FlowRouter.current().queryParams.status === 'SUCCESS';
     },
 });
 
